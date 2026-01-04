@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nail Design Studio | Privacy & Terms</title>
+  <meta name="description" content="Privacy Policy and Terms of Use for Nail Design Studio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f4efe7;
+      --bg-deep: #e7dfd3;
+      --ink: #1b1b1b;
+      --muted: #5c5c5c;
+      --accent: #c45f41;
+      --accent-2: #2e7d6f;
+      --card: #fffdf9;
+      --border: rgba(27, 27, 27, 0.08);
+      --shadow: 0 24px 60px rgba(17, 17, 17, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(196, 95, 65, 0.14), transparent 60%),
+        radial-gradient(circle at 20% 20%, rgba(46, 125, 111, 0.12), transparent 55%),
+        linear-gradient(120deg, var(--bg) 0%, #f8f2ea 40%, var(--bg-deep) 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .hero {
+      padding: 64px 20px 32px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: "Fraunces", "Times New Roman", serif;
+      font-size: clamp(32px, 5vw, 56px);
+      margin: 0 0 12px;
+      color: var(--ink);
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      background: rgba(196, 95, 65, 0.12);
+      border-radius: 999px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto 80px;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: clamp(22px, 4vw, 36px);
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(196, 95, 65, 0.16), transparent 70%);
+      pointer-events: none;
+    }
+
+    .section-title {
+      font-family: "Fraunces", "Times New Roman", serif;
+      font-size: clamp(22px, 3vw, 32px);
+      margin: 0 0 10px;
+      color: var(--accent-2);
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .toc {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin: 24px 0 0;
+    }
+
+    .toc a {
+      padding: 12px 16px;
+      background: rgba(46, 125, 111, 0.08);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .toc a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 18px rgba(46, 125, 111, 0.12);
+    }
+
+    h3 {
+      margin-top: 26px;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      color: var(--ink);
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 10px 0 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    .callout {
+      border-left: 4px solid var(--accent);
+      background: rgba(196, 95, 65, 0.06);
+      padding: 12px 16px;
+      border-radius: 12px;
+      margin-top: 16px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 24px 12px 50px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        padding-top: 44px;
+      }
+
+      .card::after {
+        display: none;
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeIn 0.6s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.05s; }
+    .delay-2 { animation-delay: 0.15s; }
+    .delay-3 { animation-delay: 0.25s; }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="pill">Nail Design Studio - Privacy & Terms</div>
+    <h1>Privacy Policy and Terms of Use</h1>
+    <p>
+      This page explains how Nail Design Studio (the "App") handles your data and the rules for using the App.
+      It is designed to meet Apple App Store and Google Play requirements.
+    </p>
+  </header>
+
+  <main class="container">
+    <section class="card fade-in delay-1" id="overview">
+      <h2 class="section-title">Quick Summary</h2>
+      <div class="meta">Last Updated: 2026-01-04</div>
+      <div class="grid">
+        <div>
+          <h3>What We Do</h3>
+          <p>
+            The App helps you create AI-powered nail art designs, save them to your gallery, and share them
+            in Discover if you choose.
+          </p>
+        </div>
+        <div>
+          <h3>Key Facts</h3>
+          <ul>
+            <li>Sign-in uses Apple or Google (Firebase Auth).</li>
+            <li>Designs are stored in Firebase Storage and Firestore.</li>
+            <li>AI generation runs through FAL.ai.</li>
+            <li>Subscriptions are managed via Apple/Google and RevenueCat.</li>
+            <li>Firebase Analytics is used for product insights.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Permissions</h3>
+          <ul>
+            <li>Photo Library: to save designs to your device.</li>
+            <li>No camera, microphone, location, or contacts access required.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">
+        Important: Designs shared to Discover and your display name become public. Consider this before sharing.
+      </div>
+    </section>
+
+    <section class="card fade-in delay-2">
+      <h2 class="section-title">Contents</h2>
+      <div class="toc">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#data-collection">Data We Collect</a>
+        <a href="#data-use">How We Use Data</a>
+        <a href="#data-sharing">Data Sharing</a>
+        <a href="#data-rights">Your Rights</a>
+        <a href="#terms">Terms of Use</a>
+        <a href="#subscriptions">Subscriptions</a>
+        <a href="#content">Content and Licensing</a>
+      </div>
+    </section>
+
+    <section class="card fade-in delay-3" id="privacy">
+      <h2 class="section-title">Privacy Policy</h2>
+      <p>
+        This Privacy Policy explains how Nail Design Studio collects, uses, and shares data. By using the App,
+        you agree to this policy.
+      </p>
+
+      <h3>1. Data Controller</h3>
+      <p>
+        Data controller: <strong>Nail Design Studio</strong><br />
+        Contact: <strong>gokalparnak13@gmail.com</strong>
+      </p>
+
+      <h3 id="data-collection">2. Data We Collect</h3>
+      <ul>
+        <li>
+          <strong>Account Data:</strong> Apple/Google auth identifiers, name (if provided), email (if provided),
+          and profile photo (if provided).
+        </li>
+        <li>
+          <strong>User Content:</strong> Designs you generate, selected styles, colors, shapes, and prompts.
+        </li>
+        <li>
+          <strong>Usage Data:</strong> App events (for example paywall views, generation started), session metadata,
+          and device-level diagnostics.
+        </li>
+        <li>
+          <strong>Subscription Data:</strong> Purchase status, product identifiers, renewal state. Payment details
+          are processed by Apple/Google. We do not receive card data.
+        </li>
+        <li>
+          <strong>Community and Safety:</strong> Likes, reports, report reasons, and moderation data.
+        </li>
+        <li>
+          <strong>Local Device Access:</strong> Photo library access for saving images to your device.
+        </li>
+      </ul>
+
+      <h3>3. Data We Do Not Collect</h3>
+      <ul>
+        <li>We do not request camera, microphone, location, contacts, or biometric data.</li>
+        <li>We do not use data for cross-app tracking.</li>
+      </ul>
+
+      <h3 id="data-use">4. How We Use Data</h3>
+      <ul>
+        <li>Provide account access and authentication.</li>
+        <li>Generate AI nail art and deliver results.</li>
+        <li>Enable saving and optional sharing in Discover.</li>
+        <li>Manage subscriptions and entitlements.</li>
+        <li>Improve product performance and user experience.</li>
+        <li>Prevent abuse, enforce policies, and meet legal obligations.</li>
+        <li>Review reports and operate moderation workflows.</li>
+      </ul>
+
+      <h3>5. Legal Bases (GDPR/Privacy)</h3>
+      <ul>
+        <li><strong>Contract:</strong> To provide the core service and features.</li>
+        <li><strong>Legitimate interests:</strong> Security, product analytics, and service improvement.</li>
+        <li><strong>Legal obligation:</strong> Responding to lawful requests.</li>
+        <li><strong>Consent:</strong> Where required for specific processing.</li>
+      </ul>
+
+      <h3 id="data-sharing">6. Data Sharing</h3>
+      <p>We may share data with the following service providers:</p>
+      <ul>
+        <li><strong>Google Firebase:</strong> Auth, Firestore, Storage, Functions, Analytics.</li>
+        <li><strong>FAL.ai:</strong> Prompts and generation parameters for AI images.</li>
+        <li><strong>RevenueCat:</strong> Subscription management and verification.</li>
+        <li><strong>Apple / Google:</strong> Sign-in and in-app purchase processing.</li>
+      </ul>
+      <p>
+        We may also disclose data to comply with legal obligations or protect the safety of users and the service.
+      </p>
+
+      <h3>7. Public Sharing</h3>
+      <p>
+        If you share to Discover, your design and display name are visible to others. You can toggle sharing off,
+        but copies saved by others may remain outside our control.
+      </p>
+      <p>
+        Design files are stored in the cloud and can be accessed via unique URLs. If you share those links,
+        third parties can view the content.
+      </p>
+
+      <h3>8. Data Retention</h3>
+      <ul>
+        <li>Data is retained while your account is active.</li>
+        <li>Deleting your account removes your designs and user records.</li>
+        <li>Backups and logs may be kept for a limited time.</li>
+      </ul>
+
+      <h3 id="data-rights">9. Your Rights</h3>
+      <ul>
+        <li>Access, correct, delete, or restrict your personal data.</li>
+        <li>Withdraw consent where consent is the legal basis.</li>
+        <li>Request data portability where legally available.</li>
+      </ul>
+      <p>
+        You can delete your account in the App. For additional requests, contact
+        <strong>gokalparnak13@gmail.com</strong>.
+      </p>
+
+      <h3>10. Security</h3>
+      <p>
+        Data is protected using industry-standard security measures in Firebase and Google Cloud. However,
+        no method of transmission over the internet is 100 percent secure.
+      </p>
+
+      <h3>11. Children's Privacy</h3>
+      <p>
+        The App is not intended for children under 13. If we learn that a child under 13 has provided data,
+        we will delete it.
+      </p>
+
+      <h3>12. International Transfers</h3>
+      <p>
+        Our service providers may process data in different countries. By using the App, you acknowledge that
+        your data may be transferred internationally.
+      </p>
+
+      <h3>13. Policy Updates</h3>
+      <p>
+        We may update this Privacy Policy from time to time. Updates will be posted on this page, and significant
+        changes may be notified in-app.
+      </p>
+    </section>
+
+    <section class="card fade-in delay-3" id="terms">
+      <h2 class="section-title">Terms of Use</h2>
+      <p>
+        By downloading or using the App, you agree to these Terms. If you do not agree, please do not use the App.
+      </p>
+
+      <h3>1. Service Description</h3>
+      <p>
+        Nail Design Studio provides AI-assisted nail art generation, saving, and optional sharing features.
+      </p>
+
+      <h3>2. Account and Access</h3>
+      <ul>
+        <li>Apple or Google sign-in is required to use core features.</li>
+        <li>You are responsible for activity under your account.</li>
+      </ul>
+
+      <h3 id="subscriptions">3. Subscriptions and Payments</h3>
+      <ul>
+        <li>Subscriptions are managed through Apple App Store or Google Play.</li>
+        <li>Subscriptions renew automatically unless canceled.</li>
+        <li>If a free trial is offered, billing starts after the trial ends.</li>
+        <li>Refunds and cancellations follow platform policies.</li>
+        <li>RevenueCat is used to validate subscription status.</li>
+      </ul>
+
+      <h3>4. Usage Limits and Fair Use</h3>
+      <ul>
+        <li>Free and weekly generation limits may apply.</li>
+        <li>Limits and plans are shown in the App and may change.</li>
+        <li>Abuse of the service may result in restricted access.</li>
+      </ul>
+
+      <h3>5. Acceptable Use</h3>
+      <ul>
+        <li>Do not generate illegal, harmful, or rights-infringing content.</li>
+        <li>Do not include personal data (phone, address, ID) in prompts.</li>
+        <li>Do not attempt to reverse engineer or disrupt the service.</li>
+      </ul>
+
+      <h3 id="content">6. Content and Licensing</h3>
+      <ul>
+        <li>You own the rights to designs you generate, subject to applicable law.</li>
+        <li>You grant us a license to store, process, and display your content to operate the App.</li>
+        <li>Content shared in Discover can be displayed publicly inside the App.</li>
+      </ul>
+
+      <h3>7. App Intellectual Property</h3>
+      <p>
+        The App software, design, trademarks, and branding belong to <strong>Nail Design Studio</strong>.
+        No rights are granted except as expressly stated in these Terms.
+      </p>
+
+      <h3>8. AI Output Disclaimer</h3>
+      <ul>
+        <li>Outputs are generated automatically and may not be unique.</li>
+        <li>We do not guarantee accuracy, suitability, or availability of results.</li>
+      </ul>
+
+      <h3>9. Changes or Termination</h3>
+      <p>
+        We may modify features, pricing, or access terms, or suspend parts of the service.
+      </p>
+
+      <h3>10. Limitation of Liability</h3>
+      <p>
+        The App is provided "as is". To the maximum extent permitted by law, we are not liable for indirect or
+        consequential damages.
+      </p>
+
+      <h3>11. Termination</h3>
+      <p>
+        We may suspend or terminate accounts for violations. You can delete your account from within the App.
+      </p>
+
+      <h3>12. Apple and Google Terms</h3>
+      <ul>
+        <li>Apple and Google are not responsible for the operation of the App.</li>
+        <li>
+          For App Store downloads, Apple's Standard EULA applies:
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noreferrer">Apple Standard EULA</a>
+        </li>
+        <li>Google Play purchases are governed by Google Play policies.</li>
+      </ul>
+
+      <h3>13. Governing Law and Disputes</h3>
+      <p>
+        These Terms are governed by applicable law, and disputes will be resolved in accordance with those laws.
+      </p>
+
+      <h3>14. Contact</h3>
+      <p>
+        For any questions or requests: <strong>gokalparnak13@gmail.com</strong>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 Nail Design Studio - This page provides both the Privacy Policy and Terms at a single URL.
+  </footer>
+</body>
+</html>
