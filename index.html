@@ -212,13 +212,13 @@
   <main class="container">
     <section class="card fade-in delay-1" id="overview">
       <h2 class="section-title">Quick Summary</h2>
-      <div class="meta">Last Updated: 2026-01-04</div>
+      <div class="meta">Last Updated: 2026-01-09</div>
       <div class="grid">
         <div>
           <h3>What We Do</h3>
           <p>
             The App helps you create AI-powered nail art designs, save them to your gallery, and share them
-            in Discover if you choose.
+            in Discover with a name you choose.
           </p>
         </div>
         <div>
@@ -228,7 +228,8 @@
             <li>Designs are stored in Firebase Storage and Firestore.</li>
             <li>AI generation runs through FAL.ai.</li>
             <li>Subscriptions are managed via Apple/Google and RevenueCat.</li>
-            <li>Firebase Analytics is used for product insights.</li>
+            <li>Firebase Analytics and Crashlytics are used for product insights and stability.</li>
+            <li>AdMob is used to show ads to free users.</li>
           </ul>
         </div>
         <div>
@@ -240,7 +241,8 @@
         </div>
       </div>
       <div class="callout">
-        Important: Designs shared to Discover and your display name become public. Consider this before sharing.
+        Important: Designs shared to Discover and your Discover name become public. You can turn sharing off
+        in The Reveal screen before publishing.
       </div>
     </section>
 
@@ -278,18 +280,27 @@
           and profile photo (if provided).
         </li>
         <li>
-          <strong>User Content:</strong> Designs you generate, selected styles, colors, shapes, and prompts.
+          <strong>User Content:</strong> Designs you generate, selected styles, colors, shapes, prompts, and
+          the Discover name you enter for public sharing.
         </li>
         <li>
           <strong>Usage Data:</strong> App events (for example paywall views, generation started), session metadata,
           and device-level diagnostics.
         </li>
         <li>
+          <strong>Diagnostics:</strong> Crash reports and performance signals (Firebase Crashlytics) to improve
+          stability and fix bugs.
+        </li>
+        <li>
+          <strong>Advertising Data (Free Users):</strong> Ad interactions (impressions, clicks) and related
+          device signals used by AdMob to serve and measure ads.
+        </li>
+        <li>
           <strong>Subscription Data:</strong> Purchase status, product identifiers, renewal state. Payment details
           are processed by Apple/Google. We do not receive card data.
         </li>
         <li>
-          <strong>Community and Safety:</strong> Likes, reports, report reasons, and moderation data.
+          <strong>Community and Safety:</strong> Likes, saves, reports, report reasons, and moderation data.
         </li>
         <li>
           <strong>Local Device Access:</strong> Photo library access for saving images to your device.
@@ -299,7 +310,8 @@
       <h3>3. Data We Do Not Collect</h3>
       <ul>
         <li>We do not request camera, microphone, location, contacts, or biometric data.</li>
-        <li>We do not use data for cross-app tracking.</li>
+        <li>We do not sell your personal data.</li>
+        <li>We do not use data for cross-app tracking without your consent.</li>
       </ul>
 
       <h3 id="data-use">4. How We Use Data</h3>
@@ -307,10 +319,12 @@
         <li>Provide account access and authentication.</li>
         <li>Generate AI nail art and deliver results.</li>
         <li>Enable saving and optional sharing in Discover.</li>
+        <li>Display Discover names and community engagement (likes/saves).</li>
         <li>Manage subscriptions and entitlements.</li>
         <li>Improve product performance and user experience.</li>
         <li>Prevent abuse, enforce policies, and meet legal obligations.</li>
         <li>Review reports and operate moderation workflows.</li>
+        <li>Serve and measure ads for free users.</li>
       </ul>
 
       <h3>5. Legal Bases (GDPR/Privacy)</h3>
@@ -325,7 +339,9 @@
       <p>We may share data with the following service providers:</p>
       <ul>
         <li><strong>Google Firebase:</strong> Auth, Firestore, Storage, Functions, Analytics.</li>
+        <li><strong>Firebase Crashlytics:</strong> Crash reporting and diagnostics.</li>
         <li><strong>FAL.ai:</strong> Prompts and generation parameters for AI images.</li>
+        <li><strong>Google AdMob:</strong> Ad delivery and measurement for free users.</li>
         <li><strong>RevenueCat:</strong> Subscription management and verification.</li>
         <li><strong>Apple / Google:</strong> Sign-in and in-app purchase processing.</li>
       </ul>
@@ -335,12 +351,17 @@
 
       <h3>7. Public Sharing</h3>
       <p>
-        If you share to Discover, your design and display name are visible to others. You can toggle sharing off,
-        but copies saved by others may remain outside our control.
+        If you share to Discover, your design and Discover name are visible to others. You can toggle sharing off
+        in The Reveal screen before or after saving.
       </p>
       <p>
         Design files are stored in the cloud and can be accessed via unique URLs. If you share those links,
         third parties can view the content.
+      </p>
+      <p>
+        If another user saves your design from Discover, their gallery entry references the original image.
+        If you remove your design, their saved copy may disappear as well. Users can download designs to
+        their device to keep a permanent copy.
       </p>
 
       <h3>8. Data Retention</h3>
@@ -379,10 +400,28 @@
         your data may be transferred internationally.
       </p>
 
-      <h3>13. Policy Updates</h3>
+      <h3>13. Advertising and Tracking</h3>
+      <p>
+        Free users may see ads served by Google AdMob. Depending on your region and consent choices,
+        ads may be personalized or non-personalized. AdMob may use device identifiers (such as the
+        Advertising ID on Android and IDFA on iOS, if permitted), IP address, and app interaction data
+        to deliver and measure ads.
+      </p>
+      <p>
+        You can limit ad personalization in your device settings. On iOS, we request App Tracking Transparency
+        (ATT) permission before accessing the IDFA. If you decline, we do not access the IDFA and ads may be
+        less personalized.
+      </p>
+
+      <h3>14. Policy Updates</h3>
       <p>
         We may update this Privacy Policy from time to time. Updates will be posted on this page, and significant
         changes may be notified in-app.
+      </p>
+      <h3>15. App Tracking Transparency (iOS)</h3>
+      <p>
+        On iOS, we request permission to use the device's Advertising Identifier (IDFA) when showing ads to
+        free users. You can allow or deny this request, and you can change your choice anytime in iOS settings.
       </p>
     </section>
 
@@ -394,7 +433,8 @@
 
       <h3>1. Service Description</h3>
       <p>
-        Nail Design Studio provides AI-assisted nail art generation, saving, and optional sharing features.
+        Nail Design Studio provides AI-assisted nail art generation, saving, and optional sharing in Discover.
+        The Discover feed may include likes, saves, and community reports.
       </p>
 
       <h3>2. Account and Access</h3>
@@ -431,6 +471,10 @@
         <li>You own the rights to designs you generate, subject to applicable law.</li>
         <li>You grant us a license to store, process, and display your content to operate the App.</li>
         <li>Content shared in Discover can be displayed publicly inside the App.</li>
+        <li>
+          Designs saved from Discover may be removed if the original creator deletes the source design.
+          Download to your device if you need a permanent copy.
+        </li>
       </ul>
 
       <h3>7. App Intellectual Property</h3>
